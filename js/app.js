@@ -63,7 +63,7 @@
   // Initialise a sync with the remote server
   function sync() {}
 
-  // EDITING STARTS HERE (you dont need to edit anything below this line)
+  // EDITING STOPS HERE (you dont need to edit anything below this line)
 
   // There was some form or error syncing
   function syncError() {
