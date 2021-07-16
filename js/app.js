@@ -8,7 +8,7 @@
   // EDITING STARTS HERE (you dont need to edit anything above this line)
 
   var db = new PouchDB("todos");
-  var remoteCouch = false;
+  var remoteCouch = "http://couchdb-anglus.alwaysdata.net:5984/anglus_testdb";
 
   // auto update UI whenever remote data changes
   db.changes({
@@ -61,7 +61,12 @@
   }
 
   // Initialise a sync with the remote server
-  function sync() {}
+  function sync() {
+    syncDom.setAttribute("data-sync-state", "syncing");
+    var opts = { live: true };
+    db.replicate.to(remoteCouch, opts, syncError);
+    db.replicate.from(remoteCouch, opts, syncError);
+  }
 
   // EDITING STOPS HERE (you dont need to edit anything below this line)
 
