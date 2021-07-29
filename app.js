@@ -8,8 +8,7 @@
   // EDITING STARTS HERE (you dont need to edit anything above this line)
 
   var db = new PouchDB("todos");
-  var remoteCouch = "http://localhost:3000/todos_remote";
-  // "http://anglus_stu:Stu_alwaysdata01@couchdb-anglus.alwaysdata.net:5984/anglus_testdb";
+  var remoteCouch = "http://couchdb-anglus.alwaysdata.net:5984/anglus_testdb";
 
   // auto update UI whenever remote data changes
   db.changes({
