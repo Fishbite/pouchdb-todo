@@ -8,8 +8,12 @@
   // EDITING STARTS HERE (you dont need to edit anything above this line)
 
   var db = new PouchDB("todos");
-  var remoteCouch = "http://localhost:3000/todos_remote";
-  // "http://anglus_stu:Stu_alwaysdata01@couchdb-anglus.alwaysdata.net:5984/anglus_testdb";
+
+  var remoteCouch =
+    "https://apikey-v2-1tqmc0h2fg2x82e64dymdpmd851ao2jxrhj8a7z5acc8:2e27396ef2d2dcf65bb25396aad217f3@83ccac10-7015-463a-9f93-614f9681272a-bluemix.cloudantnosqldb.appdomain.cloud/todos-remote";
+
+  // connect to a local machine remote pouchdb-server. Start server first!!!
+  // var remoteCouch = "http://localhost:3000/todos_remote";
 
   // auto update UI whenever remote data changes
   db.changes({
